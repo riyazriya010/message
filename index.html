@@ -22,19 +22,18 @@
             background-color: red;
             color: white;
             font-size: 20px;
-            padding: 20px;
+            padding: 20px 30px;
             border: none;
-            border-radius: 50%;
+            border-radius: 50px;
             cursor: pointer;
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px; /* Space between text and heart */
         }
-        .heart-button::before {
-            content: '\2764';
+        .heart-button .heart {
             font-size: 30px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
         }
         .message {
             display: none;
@@ -63,7 +62,9 @@
 </head>
 <body>
     <div class="container">
-        <button class="heart-button" onclick="showMessage()"></button>
+        <button class="heart-button" onclick="showMessage()">
+            <span class="heart">❤️</span> Touch
+        </button>
         <div class="message" id="farewellMessage">
             <h2>Hellooooo Ma’am,</h2>
             <p>I don’t know what to say because I still can’t believe this is true—that you are leaving us. From being someone who struggled with communication, you helped me improve and become better.</p>
